@@ -1,0 +1,20 @@
+{
+  "name": "CRUD01",
+  "version": "1.0.0",
+  "main": "index.js",
+  "license": "MIT",
+  "dependencies": {
+    "cors": "^2.8.5",
+    "dotenv": "^16.4.5",
+    "express": "^4.19.2",
+    "mongodb": "^6.6.2",
+    "mongoose": "^8.4.0",
+    "nodemon": "^3.1.0",
+    "short-unique-id": "^5.2.0",
+    "shortid": "^2.2.16",
+    "uuid": "^9.0.1"
+  },
+  "scripts": {
+    "start": "nodemon index.js"
+  }
+}
