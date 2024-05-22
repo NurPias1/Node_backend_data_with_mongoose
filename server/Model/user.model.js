@@ -3,26 +3,25 @@ const mongoose = require("mongoose");
 const userSchema = mongoose.Schema({
   id: {
     type: String,
-    required: true,
   },
   name: {
     type: String,
-    required: true,
   },
   phone: {
     type: String,
-    required: true,
-    validate: {
-      validator: function (v) {
-        return /\d{11}/.test(v);
-      },
-      message: (props) => `${props.value} is not a valid phone number!`,
-    },
+    // validate: {
+    //   validator: function (v) {
+    //     return /\d{11}/.test(v);
+    //   },
+    //   message: (props) => `${props.value} is not a valid phone number!`,
+    // },
     unique: true,
+    sparse: true,
+    partialFilterExpression: { mobile: { $type: "string" } },
+    background: true,
   },
   age: {
     type: String,
-    required: true,
     validate: {
       validator: function (v) {
         return /\d{2}/.test(v);
@@ -32,7 +31,9 @@ const userSchema = mongoose.Schema({
   },
   address: {
     type: String,
-    required: true,
+  },
+  sex: {
+    type: String,
   },
 });
 
