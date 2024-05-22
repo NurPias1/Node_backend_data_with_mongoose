@@ -1,6 +1,6 @@
-import logo from "./logo.svg";
 import "./App.css";
 import useSWR from "swr";
+
 const fetcher = (...args) => fetch(...args).then((res) => res.json());
 
 function App() {
@@ -14,12 +14,10 @@ function App() {
 
   return (
     <div className="App">
-      <form action="http://localhost:4000/api/user/" method="post">
-        
-
+      {/* <form action="http://localhost:4000/api/user/" method="post">
         <label for="fname">name:</label>
         <br />
-        <input type="name" name="name" id="name"  />
+        <input type="name" name="name" id="name" />
         <br />
         <label for="fname">phone:</label>
         <br />
@@ -42,7 +40,21 @@ function App() {
         <br />
         <button action="submit">Submit</button>
       </form>
-      
+      <a href="../public/login.html">ddddddddd</a> */}
+
+      <div class="login">
+        <form action="" method="post">
+          <label for="">Type your mail</label>
+          <br />
+          <input type="text" id="mail" />
+          <br />
+          <label for="">Type your Password</label>
+          <br />
+          <input type="text" id="password" />
+          <br />
+          <button action="submit">Submit</button>
+        </form>
+      </div>
     </div>
   );
 }
